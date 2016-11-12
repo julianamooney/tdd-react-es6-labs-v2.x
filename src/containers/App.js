@@ -7,7 +7,7 @@ function mapStateToProps(state) {
     return {
         questions: state.questions,
         checkedValue: state.checkedValue
-    }
+    };
 }
 
 function mapDispatchToProps(dispatch) {
