@@ -31,11 +31,11 @@ class Poll extends React.Component {
                 {questionsOutput}
             </div>
         );
-    };
+    }
 }
 
 function mapStateToProps(state){
-    return {checkedValue:state.checkedValue}
+    return {checkedValue:state.checkedValue};
 }
 
 export default connect(mapStateToProps)(Poll);
