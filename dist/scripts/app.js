@@ -44,18 +44,30 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var sayHello = __webpack_require__(1);
+	'use strict';
 
-	document.getElementById('welcome-message').innerHTML = sayHello.greet('Chris');
+	var _sayHello = __webpack_require__(1);
+
+	var sayHello = _interopRequireWildcard(_sayHello);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	window.addEventListener('load', function () {
+	    document.getElementById('welcome-message').innerHTML = sayHello.greet('Chris');
+	});
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	exports.greet = function greet(name) {
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var greet = exports.greet = function greet(name) {
 	    name = name ? name : 'Friend!';
 	    return 'Hello, ' + name;
-
 	};
 
 /***/ }
