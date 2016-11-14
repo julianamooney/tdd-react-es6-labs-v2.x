@@ -37,6 +37,7 @@ class PollContainer extends React.Component {
 
 
 
+
     componentWillMount() {
         console.log('componentWillMount()');
     }
@@ -106,7 +107,7 @@ class PollContainer extends React.Component {
                     <div className="col-sm-4 col-sm-offset-4">
                         <form>
                             {questionsOutput}
-                            <PollSubmitButton />
+                            <PollSubmitButton handleClick={this.checkAnswer}/>
                         </form>
                     </div>
                 </div>
