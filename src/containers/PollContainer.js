@@ -5,8 +5,8 @@ import PollAnswer from '../components/PollAnswer.js';
 import PollSubmitButton from '../components/PollSubmitButton.js';
 
 class PollContainer extends React.Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.state = {
             header: 'Welcome to the poll!',
             question: 'What is the best?',
