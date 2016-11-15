@@ -11,8 +11,7 @@ describe('Poll Answer', function() {
     });
 
     it('renders without problems', function() {
-        var pollanswer = TestUtils.renderIntoDocument(<PollAnswer />);
-        expect(pollanswer).toEqual(jasmine.anything());
+        expect(component).toEqual(jasmine.anything());
     });
 
     it('prints a message', function() {

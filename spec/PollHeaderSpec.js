@@ -11,8 +11,7 @@ describe('Poll Header', function() {
     });
 
     it('renders without problems', function() {
-        var pollheader = TestUtils.renderIntoDocument(<PollHeader />);
-        expect(pollheader).toEqual(jasmine.anything());
+        expect(component).toEqual(jasmine.anything());
     });
 
     it('prints a message', function() {
