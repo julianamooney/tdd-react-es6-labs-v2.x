@@ -52,7 +52,7 @@
     "jquery": "^3.1.1",
     "react": "*",
     "react-dom": "*",
-    "react-router": "*"
+    "react-router": "*",
     "react-redux": "^4.4.5",
     "react-router-redux": "^4.0.6",
     "redux": "^3.6.0"
