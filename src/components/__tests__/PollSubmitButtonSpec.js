@@ -19,7 +19,7 @@ describe('Poll Submit Button', function() {
         expect(buttonText).toEqual('Go!');
     });
 
-    /*it('calls handler function on click', function () {
+    it('calls handler function on click', function () {
 
         var PollSubmitButton = require('../PollSubmitButton').default;
 
@@ -37,6 +37,6 @@ describe('Poll Submit Button', function() {
         var numberOfCallsMadeIntoMockFunction = handleClick.mock.calls.length;
 
         expect(numberOfCallsMadeIntoMockFunction).toBe(1);
-    });*/
+    });
 
 });
