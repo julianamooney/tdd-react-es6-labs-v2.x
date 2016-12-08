@@ -22,9 +22,11 @@ module.exports = {
             "warn",
             4
         ],
+        "no-unused-vars": [
+            "warn"
+        ],
         "linebreak-style": [
-            "warn",
-            "windows"
+            "warn"
         ],
         "quotes": [
             "error",
