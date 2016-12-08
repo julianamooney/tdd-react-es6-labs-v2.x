@@ -1,52 +1,22 @@
-# TDD with React and ES6
+# learning react
 
-Completed Labs for TDD with React and ES6 by Chris Minnick
+## Demo Project
 
-## About the Repo
+### Background
+Linda is a distance swimmer. Each month, she buys a lap swim pass from the city Department of 
+Parks and Recreation that gets her 20 entries to the pool and is only good for one month. 
 
-You can clone the entire repository by running the command:
+The current cost of the pass is $50.
 
-`git clone https://github.com/watzthisco/tdd-react-es6-labs`
+The first time she swims each month, she swims 1 kilometer (1000 meters). She increases her distance by 100 
+meters each time she swims during the month
 
-This will create a new directory called tdd-react-es6-labs. Changing into this directory with this command:
+Build an app that will tell Linda:
+- How far she will have swum if she swims 20 times
+- What is her price per kilometer swum
+- What do the numbers look like if any of the variables in the equation change:
+-- Price for the lap swim pass
+-- Number of times she uses the pass in a month
+-- Starting distance
+-- Daily increase in distance
 
-`cd tdd-react-es6-labs`
-
-Each lab in the course (starting with Lab 6) is in its own branch. The branches are named in labxx format.
-To see the finished files for Lab 6, for example, run this command:
-
-`git checkout lab06`
-
-## Installation
-
-1. Install Node
-2. Install git
-3. In the console, type: npm install
-
-## Usage
-
-### Building
-
-1. gulp build
-
-### Testing
-
-To Lint:
-
-Use 'gulp jshint' for JSHint
-Use 'gulp eslint' for ESLint
-
-Run unit tests in Karma
-
-1. Start Karma server: gulp karma
-2. Open some browsers and go to http://localhost:9876 in each
-3. gulp test
-
-Run unit tests in the console:
-1. gulp jasmine
-
-## Credits
-written by Chris Minnick, copyright 2016, WatzThis?
-
-## License
-http://creativecommons.org/licenses/by-nc/4.0
