@@ -34,11 +34,11 @@ To see the finished files for Lab 7, for example, run this command:
 3. If that works, try using the appropriate shell script in the root of
 the project (either gulp.sh (Unix and Mac) or gulp.cmd (Windows)
 
-`./gulp.sh build`
+mac: `./gulp.sh build`
 
 or
 
-`gulp.cmd build`
+windows: `gulp build`
  
 
 ## Usage
