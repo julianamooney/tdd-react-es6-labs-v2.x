@@ -12,15 +12,16 @@ This will create a new directory called tdd-react-es6-labs. Changing into this d
 
 `cd tdd-react-es6-labs`
 
-Each lab in the course (starting with Lab 6) is in its own branch. The branches are named in labxx format.
-To see the finished files for Lab 6, for example, run this command:
+Each lab in the course (starting with Lab 7) is in its own branch. The branches are named in labxx format.
+To see the finished files for Lab 7, for example, run this command:
 
-`git checkout lab06`
+`git checkout lab07`
 
 ## Installation
 
 1. Install Node
 2. Install git
+3. Install gulp 4 (follow instructions here https://demisx.github.io/gulp4/2015/01/15/install-gulp4.html)
 3. In the console, type: npm install
 
 ## Usage
@@ -38,12 +39,14 @@ Use 'gulp eslint' for ESLint
 
 Run unit tests in Karma
 
-1. Start Karma server: gulp karma
+1. Start Karma server: 'gulp karma'
 2. Open some browsers and go to http://localhost:9876 in each
-3. gulp test
+3. 'gulp test'
 
 Run unit tests in the console:
-1. gulp jasmine
+'gulp jasmine'
+or 
+'gulp jest'
 
 ## Credits
 written by Chris Minnick, copyright 2016, WatzThis?
