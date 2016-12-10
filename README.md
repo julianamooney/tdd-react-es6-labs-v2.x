@@ -28,25 +28,25 @@ To see the finished files for Lab 7, for example, run this command:
 
 ### Building
 
-1. gulp build
+1. `gulp build`
 
 ### Testing
 
 To Lint:
 
-Use 'gulp jshint' for JSHint
-Use 'gulp eslint' for ESLint
+Use `gulp jshint` for JSHint
+Use `gulp eslint` for ESLint
 
 Run unit tests in Karma
 
-1. Start Karma server: 'gulp karma'
+1. Start Karma server: `gulp karma`
 2. Open some browsers and go to http://localhost:9876 in each
-3. 'gulp test'
+3. `gulp test`
 
 Run unit tests in the console:
-'gulp jasmine'
+`gulp jasmine`
 or 
-'gulp jest'
+`gulp jest`
 
 ## Credits
 written by Chris Minnick, copyright 2016, WatzThis?
