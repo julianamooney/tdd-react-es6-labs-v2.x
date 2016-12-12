@@ -7,6 +7,4 @@
 * Write Lab 32
 * Expand Redux section of slides
 * Create 2-day version of class that bypasses all setup (using create-react-app)
-* Make separate repo for node_modules?
-* Make version of labs that can be installed and work totally offline, windows and mac
 * 
