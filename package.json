@@ -1,6 +1,6 @@
 {
   "name": "react-training",
-  "version": "1.1.0",
+  "version": "1.5.0",
   "description": "Lab files for TDD with React and ES6 by Chris Minnick",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/watzthisco/tdd-react-es6-labs/issues"
   },
-  "homepage": "https://github.com/watzthisco/tdd-react-es6-labs#readme",
+  "homepage": "http://watzthisco.github.io/tdd-react-es6-labs/",
   "engines": {
     "node": "4.4.2"
   },
@@ -18,7 +18,6 @@
   "scripts": {
     "test": "./node_modules/.bin/gulp jest"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "*",
