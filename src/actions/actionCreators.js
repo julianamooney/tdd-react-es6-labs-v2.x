@@ -5,3 +5,11 @@ export function selectAnswer(index,value){
         value
     };
 }
+
+export function checkAnswers(index,value){
+    return {
+        type: 'CHECK_ANSWERS',
+        index,
+        value
+    };
+}
