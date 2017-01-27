@@ -17,6 +17,8 @@ class PollContainer extends React.Component {
         };
 
         this.setCheckedValue = this.setCheckedValue.bind(this);
+        this.checkAnswer = this.checkAnswer.bind(this);
+
     }
 
     setCheckedValue(name,value){
@@ -28,8 +30,9 @@ class PollContainer extends React.Component {
         });
     }
 
-    checkAnswer(value){
-        if (value===this.state.correctAnswer){
+    checkAnswer(event){
+        event.preventDefault();
+        if (this.state.checkedValue===this.state.correctAnswer){
             console.log('correct');
         }
     }
@@ -68,7 +71,7 @@ class PollContainer extends React.Component {
     }
     componentDidUpdate(){
         console.log('componentDidUpdate');
-        this.checkAnswer(this.state.checkedValue);
+        //this.checkAnswer(this.state.checkedValue);
     }
     componentWillUnmount() {
         console.log('componentWillUnmount()');
