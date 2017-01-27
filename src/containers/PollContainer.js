@@ -21,12 +21,11 @@ class PollContainer extends React.Component {
 
     }
 
-    setCheckedValue(name,value){
-        var newChecked = this.state.checkedValue.slice(0,this.state.numberOfQuestions);
-        newChecked[name] = value;
+    setCheckedValue(value){
+       
 
         this.setState({
-            checkedValue: newChecked
+            checkedValue: value
         });
     }
 
@@ -86,20 +85,7 @@ class PollContainer extends React.Component {
             padding: '10px'
         };
 
-        var questionsArray = this.state.questions;
-        var questionsOutput = questionsArray.map(function(question,questionNumber){
-            return (
-                <div key={`question-number-${questionNumber}`}>
-                    <PollQuestion text={question.question} />
-                    <RadioButtonGroup
-                        name={questionNumber}
-                        checkedValue={this.state.checkedValue[questionNumber]}
-                        choices={question.choices}
-                        onChange = {this.setCheckedValue} />
-                </div>
-            );
 
-        }.bind(this));
 
         return (
             <div className="container">
@@ -109,12 +95,17 @@ class PollContainer extends React.Component {
                 <div className="row" style={rowStyle}>
                     <div className="col-sm-4 col-sm-offset-4">
                         <form>
-                            {questionsOutput}
-                            <PollSubmitButton handleClick={this.checkAnswer}/>
+                            <PollQuestion text={this.state.question} />
+                            <RadioButtonGroup
+                                name = 'answer'
+                                checkedValue = {this.state.checkedValue}
+                                choices = {this.state.choices}
+                                onChange = {this.setCheckedValue}
+                            />
+                            <PollSubmitButton handleClick={this.checkAnswer} />
                         </form>
                     </div>
                 </div>
-
             </div>
         );
     }
