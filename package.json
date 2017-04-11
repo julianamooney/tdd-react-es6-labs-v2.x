@@ -47,6 +47,7 @@
     "karma-commonjs": "*",
     "karma-jasmine": "*",
     "karma-webpack": "*",
+    "prop-types": "^15.5.6",
     "react-addons-test-utils": "*",
     "semver": "*",
     "webpack": "*",
