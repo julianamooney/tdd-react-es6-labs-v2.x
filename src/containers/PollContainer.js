@@ -1,8 +1,8 @@
 import React from 'react';
-import PollHeader from '../components/PollHeader.js';
-import PollQuestion from '../components/PollQuestion.js';
-import PollAnswer from '../components/PollAnswer.js';
-import PollSubmitButton from '../components/PollSubmitButton.js';
+import PollHeader from '../components/PollHeader';
+import PollQuestion from '../components/PollQuestion';
+import PollAnswer from '../components/PollAnswer';
+import PollSubmitButton from '../components/PollSubmitButton';
 
 class PollContainer extends React.Component {
     render() {
