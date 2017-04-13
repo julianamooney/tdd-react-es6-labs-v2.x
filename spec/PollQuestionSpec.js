@@ -1,5 +1,5 @@
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import TestUtils from 'react-dom/test-utils';
 import PollQuestion from '../src/components/PollQuestion.js';
 
 describe('Poll Question', function() {
