@@ -68,23 +68,28 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 exports.greet = function greet(name) {
     name = name ? name : 'Friend!';
     return 'Hello, ' + name;
-
 };
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
 var sayHello = __webpack_require__(0);
 
-document.getElementById('welcome-message').innerHTML = sayHello.greet('Chris');
-
-
+window.addEventListener('load', function () {
+    document.getElementById('welcome-message').innerHTML = sayHello.greet('Chris');
+});
 
 /***/ })
 /******/ ]);

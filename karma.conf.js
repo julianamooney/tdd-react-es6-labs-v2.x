@@ -31,6 +31,20 @@ module.exports = function (config) {
             'spec/**/*.js': ['webpack']
         },
 
+        webpack:{
+            entry  : './src/scripts/app.js',
+
+            module : {
+                loaders: [ {
+                    test   : /.js$/,
+                    loader : 'babel-loader',
+                    query: {
+                        presets: ['es2015']
+                    }
+                }
+                ]
+            }
+        },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
