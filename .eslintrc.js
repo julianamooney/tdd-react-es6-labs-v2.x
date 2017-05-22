@@ -18,11 +18,12 @@ module.exports = {
     ],
     "rules": {
         "indent": [
-            "warn",
+            "error",
             4
         ],
         "linebreak-style": [
-            "warn"
+            "error",
+            "unix"
         ],
         "quotes": [
             "error",
@@ -32,8 +33,6 @@ module.exports = {
             "error",
             "always"
         ],
-        "no-console": [
-            "warn"
-        ]
+        "no-console": ["off"]
     }
 };
