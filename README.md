@@ -9,26 +9,14 @@ React Project Template with automated build.
 
 ## Usage
 
-### Building
+To build:
 
-1. gulp build
+1. npm run build
 
-### Testing
+To run:
 
-To Lint:
-
-Use 'gulp jshint' for JSHint
-Use 'gulp eslint' for ESLint
-
-Run unit tests in Karma
-
-1. Start Karma server: gulp karma
-2. Open some browsers and go to http://localhost:9876 in each
-3. gulp test
-
+1. npm start
 
 ## Credits
-written by Chris Minnick, copyright 2017, WatzThis?
 
 ## License
-http://creativecommons.org/licenses/by-nc/4.0

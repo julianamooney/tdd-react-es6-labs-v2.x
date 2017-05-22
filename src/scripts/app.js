@@ -1,5 +1,6 @@
 import * as sayHello from './sayHello.js';
 
-window.addEventListener('load', function(){
+window.addEventListener('load',()=>{
     document.getElementById('welcome-message').innerHTML = sayHello.greet('Chris');
 });
+

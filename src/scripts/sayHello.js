@@ -1,4 +1,5 @@
-export let greet = (name) => {
+export function greet(name) {
     name = name ? name : 'Friend!';
     return 'Hello, ' + name;
-};
+
+}
