@@ -11,7 +11,11 @@ React Project Template with automated build.
 
 To build:
 
-1. gulp
+1. npm run build
+
+To run:
+
+1. npm start
 
 ## Credits
 
