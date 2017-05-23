@@ -15,7 +15,7 @@ module.exports = {
             test   : /.js$/,
             loader : 'babel-loader',
             query: {
-                presets: ['es2015','react']
+                presets: ['es2015','react','react-hmre']
             }
         }
         ]
@@ -24,7 +24,7 @@ module.exports = {
         new CleanWebpackPlugin('dist'),
         new HTMLWebpackPlugin({
             filename: 'index.html',
-            title: 'Welcome to my Poll!',
+            title: 'Welcome to my poll!',
             template: 'src/index.html'
         })
     ]

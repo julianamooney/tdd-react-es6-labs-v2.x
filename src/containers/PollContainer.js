@@ -11,9 +11,9 @@ class PollContainer extends React.Component {
             header: 'Welcome to the poll!',
             question: 'What is the best?',
             answer1: 'Tacos',
-            answer2: 'Pizza',
+            answer2: 'Pizzas',
             answer3: 'Beer',
-            correctAnswer: 'Pizza'
+            correctAnswer: 'Pizzas'
         };
     }
 
