@@ -1,5 +1,5 @@
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import TestUtils from 'react-dom/test-utils';
 import PollContainer from '../src/containers/PollContainer.js';
 
 describe('Poll Container', function() {

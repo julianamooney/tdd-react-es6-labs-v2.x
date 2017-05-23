@@ -36,7 +36,7 @@ class PollContainer extends React.Component {
     }
     componentDidMount(){
         console.log('componentDidMount');
-        this.serverRequest = $.get('http://localhost:8000/data/data.json', function (result) {
+        this.serverRequest = $.get('http://localhost:8080/data/data.json', function (result) {
             var data = result;
             this.setState({
                 header: data.poll.header,
