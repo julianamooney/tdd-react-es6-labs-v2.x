@@ -1,32 +1,36 @@
-/* eslint-disable */
-
-jest.dontMock('../PollSubmitButton');
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
+import TestUtils from 'react-dom/test-utils';
 import { shallow } from 'enzyme';
 
 describe('Poll Submit Button', function() {
 
-    const PollSubmitButton = require('../PollSubmitButton').default;
+    const PollSubmitButton = require('../src/components/PollSubmitButton').default;
 
     it('renders without a problem', function () {
 
-        var pollsubmitbutton = shallow(<PollSubmitButton />);
-        //var buttonText = ReactDOM.findDOMNode(pollsubmitbutton).textContent;
+        var pollsubmitbutton = TestUtils
+            .renderIntoDocument(<PollSubmitButton />);
 
-        expect(pollsubmitbutton.text()).toEqual('Go!');
+        var buttonText = ReactDOM.findDOMNode(pollsubmitbutton).textContent;
+
+        expect(buttonText).toEqual('Go!');
     });
+
+
 
     it('calls handler function on click', function () {
 
-        var PollSubmitButton = require('../PollSubmitButton').default;
+        var PollSubmitButton = 	require('../src/components/PollSubmitButton').default;
 
         var handleClick = jest.genMockFunction();
 
         var pollsubmitbutton = TestUtils
-            .renderIntoDocument(<PollSubmitButton question={0} handleClick={handleClick}/>);
+            .renderIntoDocument(
+                <PollSubmitButton
+                    question={0}
+                    handleClick={handleClick}
+                />);
 
         var buttonInstance = ReactDOM.findDOMNode(pollsubmitbutton);
 
