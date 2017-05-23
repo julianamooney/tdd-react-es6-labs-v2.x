@@ -3,6 +3,7 @@ import PollHeader from '../components/PollHeader.js';
 import PollQuestion from '../components/PollQuestion.js';
 import PollSubmitButton from '../components/PollSubmitButton.js';
 import RadioButtonGroup from '../components/RadioButtonGroup.js';
+
 import $ from 'jquery';
 
 class PollContainer extends React.Component {
@@ -30,7 +31,7 @@ class PollContainer extends React.Component {
     }
     componentDidMount(){
         console.log('componentDidMount');
-        this.serverRequest = $.get('http://localhost:8000/data/data.json', function (result) {
+        this.serverRequest = $.get('http://localhost:8080/data/data.json', function (result) {
             var data = result;
             this.setState({
                 header: data.poll.header,

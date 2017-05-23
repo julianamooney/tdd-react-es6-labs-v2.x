@@ -7,7 +7,9 @@ describe('Poll Question', function() {
     var component;
     beforeEach(function(){
         component = TestUtils.renderIntoDocument(
-            <TestWrapper><PollQuestion text="What is the question?" /></TestWrapper>
+            <TestWrapper>
+                <PollQuestion text="What is the question?" />
+            </TestWrapper>
         );
     });
     it('renders without problems', function() {
