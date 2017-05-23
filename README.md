@@ -17,6 +17,12 @@ To run:
 
 1. npm start
 
+## Notes
+
+* webpack-dev-server doesn't watch files correctly if the files are in 
+  dropbox, or if your editor uses 'safe saving'. Disable this in 
+  webstorm.
+
 ## Credits
 
 ## License
