@@ -34,9 +34,7 @@ module.exports = function(config) {
     webpack: {
       entry : './src/scripts/app.js',
       module : {
-        loaders : [
-        {test: /\.json$/, loader: 'json' },
-        {
+        loaders : [{
           test : /.js$/,
           loader : 'babel-loader',
           query : {
