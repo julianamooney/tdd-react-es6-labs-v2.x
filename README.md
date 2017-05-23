@@ -5,33 +5,24 @@ React Project Template with automated build.
 ## Installation
 
 1. Install Node
-2. Install git
-3. In the console, type: npm install
+2. In the console, type: npm install
 
 ## Usage
 
-### Building
+To build:
 
-1. gulp build
+1. npm run build
 
-### Testing
+To run:
 
-To Lint:
+1. npm start
 
-Use 'gulp jshint' for JSHint
-Use 'gulp eslint' for ESLint
+## Notes
 
-Run unit tests in Karma
-
-1. Start Karma server: gulp karma
-2. Open some browsers and go to http://localhost:9876 in each
-3. gulp test
-
-Run unit tests in the console:
-1. gulp jasmine
+* webpack-dev-server doesn't watch files correctly if the files are in 
+  dropbox, or if your editor uses 'safe saving'. Disable this in 
+  webstorm.
 
 ## Credits
-written by Chris Minnick, copyright 2016, WatzThis?
 
 ## License
-http://creativecommons.org/licenses/by-nc/4.0
