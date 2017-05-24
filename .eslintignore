@@ -1,3 +1,3 @@
 dist/**
 spec/**
-data/**
+src/data/**
