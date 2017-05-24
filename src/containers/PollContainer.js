@@ -40,7 +40,7 @@ class PollContainer extends React.Component {
                     <div className="col-sm-4 col-sm-offset-4">
                         <form>
                             {questionsOutput}
-                            <PollSubmitButton onClick = {this.props.checkAnswers} />
+                            <PollSubmitButton />
                         </form>
                     </div>
                 </div>
