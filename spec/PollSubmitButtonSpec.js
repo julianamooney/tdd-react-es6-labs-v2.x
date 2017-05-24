@@ -1,5 +1,5 @@
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import TestUtils from 'react-dom/test-utils';
 import PollSubmitButton from '../src/components/PollSubmitButton.js';
 import TestWrapper from '../src/components/TestWrapper.js';
 
