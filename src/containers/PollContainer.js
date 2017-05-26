@@ -15,22 +15,22 @@ class PollContainer extends React.Component {
             borderRadius: '6px',
             padding: '10px'
         };
+        if(this.props.questions) {
+            var questionsArray = this.props.questions;
+            var questionsOutput = questionsArray.map(function (question, questionNumber) {
+                return (
+                    <div key={`question-number-${questionNumber}`}>
+                        <PollQuestion text={question.question}/>
+                        <RadioButtonGroup
+                            name={questionNumber}
+                            checkedValue={this.props.checkedValue[questionNumber]}
+                            choices={question.choices}
+                            onChange={this.props.selectAnswer}/>
+                    </div>
+                );
 
-        var questionsArray = this.props.questions;
-        var questionsOutput = questionsArray.map(function(question,questionNumber){
-            return (
-                <div key={`question-number-${questionNumber}`}>
-                    <PollQuestion text={question.question} />
-                    <RadioButtonGroup
-                        name={questionNumber}
-                        checkedValue={this.props.checkedValue[questionNumber]}
-                        choices={question.choices}
-                        onChange = {this.props.selectAnswer} />
-                </div>
-            );
-
-        }.bind(this));
-
+            }.bind(this));
+        }
         return (
             <div className="container">
                 <div className="jumbotron">
