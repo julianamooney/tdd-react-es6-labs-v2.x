@@ -7,9 +7,8 @@
 * Write Lab 32
 * Expand Redux section of slides
 * Create 2-day version of class that bypasses all setup (using create-react-app)
-* proxy for gulp:
+* write MobX lab
 
-npm config set http-proxy "http://user:pass@www-proxy.3dns.lmig.com:80"
-npm config set https-proxy "http://user:pass@www-proxy.3dns.lmig.com:80"
+
 
 
