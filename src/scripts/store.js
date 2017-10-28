@@ -2,29 +2,24 @@ import { createStore, applyMiddleware, compose } from 'redux';
 
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
-import thunkMiddleware from 'redux-thunk';
 
+import createSagaMiddleware from 'redux-saga'
 
-//import root reducer
 import rootReducer from '../reducers/index';
+import mySaga from '../actions/sagas';
 
-//create an object for the default data
-var questions = [];
-const defaultState = {
-    questions,
-    checkedValue: []
-};
+// create the saga middleware
+const sagaMiddleware = createSagaMiddleware();
 
-const createStoreWithMiddleware =
-    compose( applyMiddleware(thunkMiddleware) )(createStore);
+// mount it on the Store
+const store = createStore(
+    rootReducer,
+    applyMiddleware(sagaMiddleware)
+);
 
+// then run the saga
+sagaMiddleware.run(mySaga);
 
-function configureStore(initialState) {
-    const store = createStoreWithMiddleware(rootReducer);
-    return store;
-}
-
-const store = configureStore(defaultState);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 

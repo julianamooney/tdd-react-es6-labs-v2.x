@@ -1,6 +1,6 @@
-# React Project Template
+# TDD with React and ES6
 
-React Project Template with automated build.
+Lab32 - Redux Sagas
 
 ## Installation
 

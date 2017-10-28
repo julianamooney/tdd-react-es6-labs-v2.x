@@ -8,25 +8,8 @@ export function selectAnswer(index, value) {
     };
 }
 
-export function receiveQuestions(data) {
-    console.log(data);
-    return {
-        type: 'RECEIVE_QUESTIONS',
-        questions: data.poll.questions,
-    };
-}
 
-export function fetchQuestions() {
-    return dispatch => {
-        axios.get('/data/data.json')
-            .then(response => {
-                const data = response.json();
-                dispatch(receiveQuestions(data));
-            })
-            .catch(error => dispatch({
-                type: 'FETCH_FAILED', error
-            }
-            )
-            );
-    };
+export function fetchQuestion() {
+    const { dispatch,questionID } = this.props;
+    dispatch({type: 'RECEIVE_QUESTION',payload: questionID});
 }
