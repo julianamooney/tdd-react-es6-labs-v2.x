@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-dom/test-utils';
 import { shallow } from 'enzyme';
+import PollSubmitButton from '../src/components/PollSubmitButton';
 
 describe('Poll Submit Button', function() {
 
-    const PollSubmitButton = require('../src/components/PollSubmitButton').default;
 
     it('renders without a problem', function () {
 
@@ -21,7 +21,6 @@ describe('Poll Submit Button', function() {
 
     it('calls handler function on click', function () {
 
-        var PollSubmitButton = 	require('../src/components/PollSubmitButton').default;
 
         var handleClick = jest.genMockFunction();
 
