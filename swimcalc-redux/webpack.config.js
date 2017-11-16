@@ -1,7 +1,12 @@
+const path = require('path');
+const webpack = require('webpack');
+
 module.exports = {
     entry  : './src/scripts/app.js',
-    output : {
-        filename : 'app.js'
+    output: {
+        path: path.join(__dirname, 'build/'),
+        filename: 'index.js',
+        publicPath: '/build/'
     },
     module : {
         loaders: [ {
@@ -12,13 +17,6 @@ module.exports = {
             }
         }
         ]
-    }/*,
-     plugins: [
-     new webpack.DefinePlugin({
-     'process.env': {
-     'NODE_ENV': '"production"'
-     }
-     })
-     ]*/
+    }
 
 };
