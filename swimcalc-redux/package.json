@@ -4,7 +4,7 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git://github.com/watzthisco/nightcode-react.git"
+    "url": "git://github.com/watzthisco/tdd-es6-react-labs-v2.x"
   },
   "main": "index.js",
   "scripts": {

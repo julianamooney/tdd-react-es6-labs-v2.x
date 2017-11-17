@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as actions from '../actions'
+import * as actions from '../actions';
 import InputForm from './InputForm';
 import OutputTable from './OutputTable';
 
@@ -32,14 +32,14 @@ class PageContainer extends React.Component {
 }
 
 function mapStateToProps(state){
-    return {...state}
+    return {...state};
 }
 
 function mapDispatchToProps(dispatch){
     return {
         actions: bindActionCreators(actions,dispatch),
         
-    }
+    };
 
 
 }
