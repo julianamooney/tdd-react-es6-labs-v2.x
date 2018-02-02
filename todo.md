@@ -8,6 +8,9 @@
 * Expand Redux section of slides
 * Create 2-day version of class that bypasses all setup (using create-react-app)
 * write MobX lab
+* Finish Sagas lab
+* Finish Thunk lab
+* Finish snapshot testing lab
 
 
 
