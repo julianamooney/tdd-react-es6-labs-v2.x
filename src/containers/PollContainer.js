@@ -25,7 +25,11 @@ class PollContainer extends React.Component {
         });
         //console.log('current choice: ' + value);
     }
-
+    checkAnswer(value){
+        if (value===this.state.correctAnswer){
+            console.log('correct');
+        }
+    }
     componentWillMount() {
         console.log('componentWillMount()');
     }
@@ -53,6 +57,7 @@ class PollContainer extends React.Component {
     }
     componentDidUpdate() {
         console.log('componentDidUpdate()');
+        this.checkAnswer(this.state.checkedValue);
     }
     componentWillUnmount() {
         console.log('componentWillUnmount()');
