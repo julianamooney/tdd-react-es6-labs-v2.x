@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-dom/test-utils';
-import { shallow } from 'enzyme';
+import { shallow,mount,render } from 'enzyme';
 import PollSubmitButton from '../src/components/PollSubmitButton';
 
 describe('Poll Submit Button', function() {
@@ -15,10 +15,7 @@ describe('Poll Submit Button', function() {
 
 
     it('calls handler function on click', function () {
-
-
-        var handleClick = jest.genMockFunction();
-
+        var handleClick = jest.fn();
         var pollsubmitbutton = TestUtils
             .renderIntoDocument(
                 <PollSubmitButton
