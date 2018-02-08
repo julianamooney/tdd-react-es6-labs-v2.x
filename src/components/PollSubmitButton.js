@@ -1,14 +1,14 @@
 import React from 'react';
 
 class PollSubmitButton extends React.Component{
-    checkAnswer(event){
+    handleClick(event){
         event.preventDefault();
         console.log('checking');
         this.props.checkAnswer();
     }
     render(){
         return (
-            <button onClick = {this.checkAnswer.bind(this)} className="btn btn-success">Go!</button>
+            <button onClick = {this.handleClick.bind(this)} className="btn btn-success">Go!</button>
         );
     }
 }
