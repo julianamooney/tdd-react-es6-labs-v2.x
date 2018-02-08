@@ -3,6 +3,7 @@ import PollHeader from '../components/PollHeader.js';
 import PollQuestion from '../components/PollQuestion.js';
 import PollSubmitButton from '../components/PollSubmitButton.js';
 import RadioButtonGroup from '../components/RadioButtonGroup.js';
+import AnswerCheck from '../components/AnswerCheck';
 
 import $ from 'jquery';
 
@@ -87,6 +88,8 @@ class PollContainer extends React.Component {
                                 choices = {this.state.choices}
                                 onChange = {this.setCheckedValue}
                             />
+                            <AnswerCheck checkedValue = {this.state.checkedValue}
+                                         correctAnswer = {this.state.correctAnswer} />
                         <PollSubmitButton />
                     </form>
                     </div>
