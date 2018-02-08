@@ -12,8 +12,6 @@ describe('Poll Submit Button', function() {
         expect(pollsubmitbutton.text()).toEqual('Go!');
     });
 
-
-
     it('calls handler function on click', function () {
         var handleClick = jest.fn();
         var pollsubmitbutton = TestUtils
