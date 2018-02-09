@@ -14,7 +14,7 @@ class OutputTable extends React.Component{
             dailyDistance[i] = this.props.initial + (i * this.props.increment);
             dailyTotal[i] = totalDistance + dailyDistance[i];
             totalDistance += dailyDistance[i];
-            pricePerKm[i] = ((this.props.cost / dailyDistance[i])*1000).toFixed(2);
+            pricePerKm[i] = ((this.props.cost / totalDistance)*1000).toFixed(2);
         }
 
         const dataRows = dailyDistance.map(function(distance,daynumber) {
