@@ -1,7 +1,4 @@
-import createHistory from 'history/createBrowserHistory';
-import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux';
-import {createStore, combineReducers, applyMiddleware} from 'redux';
-
+import {createStore} from 'redux';
 import rootReducer from '../reducers/index';
 import questions from '../data/questions.js';
 
@@ -10,7 +7,10 @@ const defaultState = {
     checkedValue:[]
 };
 
-const store = createStore(rootReducer, defaultState);
-const history = createHistory();
-const middleware = routerMiddleware(history);
+const store = createStore(rootReducer, defaultState,
+    window.__REDUX_DEVTOOLS_EXTENSION__ &&
+    window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
+
+export default store;

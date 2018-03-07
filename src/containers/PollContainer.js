@@ -82,16 +82,16 @@ class PollContainer extends React.Component {
             padding: '10px'
         };
 
-        var questionsArray = this.state.questions;
+        var questionsArray = this.props.questions;
         var questionsOutput = questionsArray.map(function(question,questionNumber){
             return (
                 <div key={`question-number-${questionNumber}`}>
                     <PollQuestion text={question.question} />
                     <RadioButtonGroup
                         name={questionNumber}
-                        checkedValue={this.state.checkedValue[questionNumber]}
+                        checkedValue={this.props.checkedValue[questionNumber]}
                         choices={question.choices}
-                        onChange = {this.setCheckedValue} />
+                        onChange = {this.props.selectAnswer} />
                 </div>
             );
 
@@ -100,7 +100,7 @@ class PollContainer extends React.Component {
         return (
             <div className="container">
                 <div className="jumbotron">
-                    <PollHeader text={this.state.header} />
+                    <PollHeader text="Welcome to the Poll!" />
                 </div>
                 <div className="row" style={rowStyle}>
                     <div className="col-sm-4 col-sm-offset-4">
