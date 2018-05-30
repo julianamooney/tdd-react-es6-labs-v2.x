@@ -2,33 +2,33 @@
   "name": "react-training",
   "repository": {
     "type": "git",
-    "url": "git://github.com/watzthisco/tdd-react-es6-labs.git"
+    "url": "git://github.com/watzthisco/tdd-react-es6-labs-v2.x.git"
   },
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "React Project Template with automated build.",
-  "engines": {
-    "node": "4.4.2"
-  },
   "main": "index.js",
+  "engines": {
+    "node": "8.11.2"
+  },
   "scripts": {
-    "version": "node version-check.js",
     "lint": "eslint . --ext .js",
     "test": "karma start --singleRun",
     "build": "echo \"BUILD OK\" && exit 0",
-    "start": "http-server src",
-    "prebuild": "npm run version && npm run lint && npm run test"
+    "prebuild": "npm run version && npm run lint && npm run test",
+    "version": "node version-check.js",
+    "start": "http-server src"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^4.8.0",
-    "eslint-plugin-react": "^7.4.0",
-    "http-server": "^0.10.0",
-    "jasmine": "^2.8.0",
-    "karma": "^1.7.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.8.2",
+    "http-server": "^0.11.1",
+    "jasmine": "^3.1.0",
+    "karma": "^2.0.2",
     "karma-chrome-launcher": "^2.2.0",
     "karma-commonjs": "^1.0.0",
-    "karma-jasmine": "^1.1.0",
-    "semver": "^5.4.1"
+    "karma-jasmine": "^1.1.2",
+    "semver": "^5.5.0"
   }
 }
