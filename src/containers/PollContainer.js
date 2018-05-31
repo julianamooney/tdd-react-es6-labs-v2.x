@@ -32,7 +32,9 @@ class PollContainer extends React.Component {
             console.log('correct');
         }
     }
-    componentWillMount() {
+    
+
+    UNSAFE_componentWillMount() {
         console.log('componentWillMount()');
     }
     componentDidMount(){
@@ -47,14 +49,14 @@ class PollContainer extends React.Component {
             });
         }.bind(this));
     }
-    componentWillReceiveProps() {
+    UNSAFE_componentWillReceiveProps() {
         console.log('componentWillReceiveProps()');
     }
     shouldComponentUpdate() {
         console.log('shouldComponentUpdate()');
         return true;
     }
-    componentWillUpdate() {
+    UNSAFE_componentWillUpdate() {
         console.log('componentWillUpdate()');
     }
     componentDidUpdate() {
