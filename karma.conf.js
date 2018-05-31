@@ -1,17 +1,17 @@
 // Karma configuration
-// Generated on Mon May 22 2017 13:30:59 GMT-0700 (PDT)
+// Generated on Wed May 30 2018 09:48:30 GMT-0700 (PDT)
 
-module.exports = function (config) {
+module.exports = function(config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
 
-        plugins: ['karma-jasmine', 'karma-chrome-launcher', 'karma-webpack'],
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: ['jasmine'],
+
 
 
         // list of files / patterns to load in the browser
@@ -20,8 +20,9 @@ module.exports = function (config) {
         ],
 
 
-        // list of files to exclude
-        exclude: [],
+        // list of files / patterns to exclude
+        exclude: [
+        ],
 
 
         // preprocess matching files before serving them to the browser
@@ -32,24 +33,24 @@ module.exports = function (config) {
         },
 
         webpack:{
-            entry  : './src/scripts/app.js',
+            mode: 'production',
 
-            module : {
-                loaders: [ {
-                    test   : /.js$/,
-                    loader : 'babel-loader',
-                    query: {
-                        presets: ['es2015']
+            module: {
+                rules: [ {
+                    test: /.js$/,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: 'babel-loader'
                     }
-                }
-                ]
+                }]
             }
         },
+
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+        reporters: ['dots'],
 
 
         // web server port
@@ -81,5 +82,5 @@ module.exports = function (config) {
         // Concurrency level
         // how many browser should be started simultaneous
         concurrency: Infinity
-    });
+    })
 };
