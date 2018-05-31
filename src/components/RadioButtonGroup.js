@@ -8,7 +8,7 @@ class RadioButtonGroup extends React.Component{
         const choiceItems = this.props.choices.map(choice => {
             const{value, label} = choice;
             const checked = value === this.props.checkedValue;
-
+            
             return(
                 <RadioButton
                     key = {`radio-button-${value}`}
@@ -31,7 +31,7 @@ class RadioButtonGroup extends React.Component{
 
 RadioButtonGroup.propTypes = {
     name: PropTypes.string,
-    checkedValue: PropTypes.array,
+    checkedValue: PropTypes.string,
     choices: PropTypes.array,
     onChange: PropTypes.func
 };

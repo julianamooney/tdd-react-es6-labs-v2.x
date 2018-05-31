@@ -1,63 +1,56 @@
 import React from 'react';
-import PollHeader from '../components/PollHeader';
-import PollQuestion from '../components/PollQuestion';
-import RadioButtonGroup from '../components/RadioButtonGroup';
+import PollHeader from '../components/PollHeader.js';
+import PollQuestion from '../components/PollQuestion.js';
 import PollSubmitButton from '../components/PollSubmitButton.js';
-import $ from 'jQuery';
+import RadioButtonGroup from '../components/RadioButtonGroup.js';
+import $ from 'jquery';
 
 class PollContainer extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            checkedValue: [],
             header: '',
-            questions: [],
+            question: '',
+            correctAnswer: '',
             choices: [],
-            numberOfQuestions: ''
+            checkedValue: ''
         };
-
         this.setCheckedValue = this.setCheckedValue.bind(this);
-        this.checkAnswer = this.checkAnswer.bind(this);
-
     }
-
+    
     setCheckedValue(value){
-       
-
         this.setState({
             checkedValue: value
         });
+        //console.log('current choice: ' + value);
     }
 
-    checkAnswer(event){
-        event.preventDefault();
-        if (this.state.checkedValue===this.state.correctAnswer){
+    checkAnswer(value){
+        if (value===this.state.correctAnswer){
             console.log('correct');
         }
     }
 
-
-
-
+    submitButtonClick(event){
+        event.preventDefault();
+        alert("submit");
+    }
 
     componentWillMount() {
         console.log('componentWillMount()');
     }
-
     componentDidMount(){
         console.log('componentDidMount');
         this.serverRequest = $.get('http://localhost:8080/data/data.json', function (result) {
+            var data = result;
             this.setState({
-                header: result.poll.header,
-                questions: result.poll.questions,
-                choices: result.poll.questions[0].choices,
-                correctAnswer: result.poll.questions[0].correctAnswer,
-                numberOfQuestions: result.poll.questions.length
+                header: data.poll.header,
+                question: data.poll.questions[0].question,
+                choices: data.poll.questions[0].choices,
+                correctAnswer: data.poll.questions[0].correctAnswer
             });
         }.bind(this));
     }
-
-
     componentWillReceiveProps() {
         console.log('componentWillReceiveProps()');
     }
@@ -68,15 +61,15 @@ class PollContainer extends React.Component {
     componentWillUpdate() {
         console.log('componentWillUpdate()');
     }
-    componentDidUpdate(){
-        console.log('componentDidUpdate');
-        //this.checkAnswer(this.state.checkedValue);
+    componentDidUpdate() {
+        console.log('componentDidUpdate()');
+        this.checkAnswer(this.state.checkedValue);
     }
     componentWillUnmount() {
         console.log('componentWillUnmount()');
     }
 
-    render(){
+    render() {
 
         var rowStyle = {
             backgroundColor: '#dadada',
@@ -84,9 +77,7 @@ class PollContainer extends React.Component {
             borderRadius: '6px',
             padding: '10px'
         };
-
-
-
+        
         return (
             <div className="container">
                 <div className="jumbotron">
@@ -94,23 +85,21 @@ class PollContainer extends React.Component {
                 </div>
                 <div className="row" style={rowStyle}>
                     <div className="col-sm-4 col-sm-offset-4">
-                        <form>
-                            <PollQuestion text={this.state.question} />
+                    <form>
+                        <PollQuestion text={this.state.question} />
                             <RadioButtonGroup
                                 name = 'answer'
                                 checkedValue = {this.state.checkedValue}
                                 choices = {this.state.choices}
                                 onChange = {this.setCheckedValue}
                             />
-                            <PollSubmitButton handleClick={this.checkAnswer} />
-                        </form>
+                        <PollSubmitButton handleClick = {this.submitButtonClick.bind(this)}/>
+                    </form>
                     </div>
                 </div>
             </div>
         );
     }
-
 }
-
 
 export default PollContainer;
