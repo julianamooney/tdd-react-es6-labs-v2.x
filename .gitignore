@@ -7,5 +7,5 @@
 # npm
 node_modules
 
-# generated files
+#generated files
 dist/

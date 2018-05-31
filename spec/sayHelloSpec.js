@@ -1,10 +1,10 @@
 import React from 'react';
 import TestUtils from 'react-dom/test-utils';
-import SayHello from '../src/scripts/SayHello.js';
+import SayHello from '../src/scripts/SayHello';
 
 describe('Greet', function() {
     it('renders without problems', function() {
-        var sayhello = TestUtils.renderIntoDocument(<SayHello />);
+        const sayhello = TestUtils.renderIntoDocument(<SayHello />);
         expect(sayhello).toEqual(jasmine.anything());
     });
 });
