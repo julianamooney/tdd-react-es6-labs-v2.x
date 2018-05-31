@@ -19,14 +19,14 @@ module.exports = {
     ],
     "rules": {
         "indent": [
-            "warn",
-            4
+            "warn"
         ],
         "linebreak-style": [
-            "error"
+            "warn",
+            "unix"
         ],
         "quotes": [
-            "error",
+            "warn",
             "single"
         ],
         "semi": [
