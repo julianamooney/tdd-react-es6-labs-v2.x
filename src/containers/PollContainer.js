@@ -26,10 +26,15 @@ class PollContainer extends React.Component {
     }
 
     checkAnswer(value){
-    if (value===this.state.correctAnswer){
-        console.log('correct');
+        if (value===this.state.correctAnswer){
+            console.log('correct');
+        }
     }
-}
+
+    submitButtonClick(event){
+        event.preventDefault();
+        alert("submit");
+    }
 
     componentWillMount() {
         console.log('componentWillMount()');
@@ -88,7 +93,7 @@ class PollContainer extends React.Component {
                                 choices = {this.state.choices}
                                 onChange = {this.setCheckedValue}
                             />
-                        <PollSubmitButton />
+                        <PollSubmitButton handleClick = {this.submitButtonClick.bind(this)}/>
                     </form>
                     </div>
                 </div>

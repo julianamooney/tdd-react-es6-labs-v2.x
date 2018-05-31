@@ -1,8 +1,8 @@
 import React from 'react';
 
-function PollSubmitButton(){
+function PollSubmitButton(props){
     return (
-        <button className="btn btn-success">Go!</button>
+        <button className="btn btn-success" onClick = {(event)=>{props.handleClick(event)}}>Go!</button>
     );
 }
 export default PollSubmitButton;
