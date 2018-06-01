@@ -11,16 +11,16 @@ class PollContainer extends React.Component {
         this.state = {
             checkedValue: [],
             header: '',
-            questions: [],
-            choices: [],
-            numberOfQuestions: ''
+            questions: []
         };
 
         this.setCheckedValue = this.setCheckedValue.bind(this);
+        this.checkAnswers = this.checkAnswers.bind(this);
+
     }
 
     setCheckedValue(name,value){
-        var newChecked = this.state.checkedValue.slice(0,this.state.numberOfQuestions);
+        var newChecked = this.state.checkedValue;
         newChecked[name] = value;
 
         this.setState({
@@ -28,17 +28,10 @@ class PollContainer extends React.Component {
         });
     }
 
-    checkAnswer(value){
-        if (value===this.state.correctAnswer){
-            console.log('correct');
-        }
-    }
+    checkAnswers(e){
+        e.preventDefault();
+        console.log('checking');
 
-
-
-
-    componentWillMount() {
-        console.log('componentWillMount()');
     }
 
     componentDidMount(){
@@ -46,32 +39,11 @@ class PollContainer extends React.Component {
         this.serverRequest = $.get('http://localhost:8080/data/data.json', function (result) {
             this.setState({
                 header: result.poll.header,
-                questions: result.poll.questions,
-                choices: result.poll.questions[0].choices,
-                correctAnswer: result.poll.questions[0].correctAnswer,
-                numberOfQuestions: result.poll.questions.length
+                questions: result.poll.questions
             });
         }.bind(this));
     }
 
-
-    componentWillReceiveProps() {
-        console.log('componentWillReceiveProps()');
-    }
-    shouldComponentUpdate() {
-        console.log('shouldComponentUpdate()');
-        return true;
-    }
-    componentWillUpdate() {
-        console.log('componentWillUpdate()');
-    }
-    componentDidUpdate(){
-        console.log('componentDidUpdate');
-        this.checkAnswer(this.state.checkedValue);
-    }
-    componentWillUnmount() {
-        console.log('componentWillUnmount()');
-    }
 
     render(){
 
@@ -82,14 +54,14 @@ class PollContainer extends React.Component {
             padding: '10px'
         };
 
-        var questionsArray = this.state.questions;
-        var questionsOutput = questionsArray.map(function(question,questionNumber){
+        var {questions,checkedValue,header} = this.state;
+        var questionsOutput = questions.map(function(question,questionNumber){
             return (
                 <div key={`question-number-${questionNumber}`}>
                     <PollQuestion text={question.question} />
                     <RadioButtonGroup
                         name={questionNumber}
-                        checkedValue={this.state.checkedValue[questionNumber]}
+                        checkedValue={checkedValue[questionNumber]}
                         choices={question.choices}
                         onChange = {this.setCheckedValue} />
                 </div>
@@ -100,11 +72,11 @@ class PollContainer extends React.Component {
         return (
             <div className="container">
                 <div className="jumbotron">
-                    <PollHeader text={this.state.header} />
+                    <PollHeader text={header} />
                 </div>
                 <div className="row" style={rowStyle}>
                     <div className="col-sm-4 col-sm-offset-4">
-                        <form>
+                        <form onSubmit={this.checkAnswers}>
                             {questionsOutput}
                             <PollSubmitButton />
                         </form>
