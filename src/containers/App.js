@@ -1,19 +1,24 @@
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import * as actionCreators from '../actions/actionCreators';
-import Main from './Main';
+import React from 'react';
+import {Link, Route} from 'react-router-dom';
+import PollContainer from './PollContainer';
+import AboutUs from '../components/AboutUs';
 
-function mapStateToProps(state) {
-    return {
-        questions: state.questions,
-        checkedValue: state.checkedValue
-    };
+class App extends React.Component {
+    render(){
+        return(
+            <div>
+                <ul className = "nav nav-pills">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/poll">Poll</Link></li>
+                    <li><Link to="/about">About Us</Link></li>
+                </ul>
+                <div>
+                    <Route path="/poll" component={PollContainer}/>
+                    <Route path="/about" component={AboutUs}/>
+                </div>
+            </div>
+        );
+    }
 }
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(actionCreators, dispatch);
-}
-
-const App = connect(mapStateToProps, mapDispatchToProps)(Main);
 
 export default App;

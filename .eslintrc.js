@@ -19,17 +19,14 @@ module.exports = {
     ],
     "rules": {
         "indent": [
-            "warn",
-            4
-        ],
-        "no-unused-vars": [
             "warn"
         ],
         "linebreak-style": [
-            "warn"
+            "warn",
+            "unix"
         ],
         "quotes": [
-            "error",
+            "warn",
             "single"
         ],
         "semi": [
@@ -42,5 +39,6 @@ module.exports = {
         "react/jsx-uses-react": 1,
         "react/jsx-uses-vars": 1,
         "react/react-in-jsx-scope": 1
+
     }
 };

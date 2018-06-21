@@ -31,7 +31,7 @@ class RadioButtonGroup extends React.Component{
 
 RadioButtonGroup.propTypes = {
     name: PropTypes.number,
-    checkedValue: PropTypes.string,
+    checkedValue: PropTypes.array,
     choices: PropTypes.array,
     onChange: PropTypes.func
 };
