@@ -1,13 +1,13 @@
-import {bindActionCreators} from 'redux'; 
-import {connect} from 'react-redux'; 
-import * as actionCreators from '../actions/actionCreators'; 
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import * as actionCreators from '../actions/actionCreators';
 import PollContainer from './PollContainer';
 
 function mapStateToProps(state) {
     return {
         questions: state.questions,
         checkedValue: state.checkedValue
-    }
+    };
 }
 
 function mapDispatchToProps(dispatch) {
