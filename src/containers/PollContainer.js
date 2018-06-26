@@ -30,7 +30,7 @@ class PollContainer extends React.Component {
             {value: 'Cheese', label: 'Cheese'}
         ];
 
-        var rowStyle = {
+        const rowStyle = {
             backgroundColor: '#dadada',
             border: '1px solid black',
             borderRadius: '6px',
