@@ -1,6 +1,6 @@
 import React from 'react';
 
-class PollAnswer extends React.Component{
+class RadioButton extends React.Component{
     
     handleChange() {
         this.props.onChange(this.props.value);
@@ -21,4 +21,4 @@ class PollAnswer extends React.Component{
         );
     }
 }
-export default PollAnswer;
+export default RadioButton;
