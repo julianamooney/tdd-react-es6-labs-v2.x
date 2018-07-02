@@ -8,7 +8,7 @@
   "description": "React Project Template with automated build.",
   "main": "index.js",
   "engines": {
-    "node": "8.0.0"
+    "node": "6.9.5"
   },
   "scripts": {
     "lint": "eslint . --ext .js",
